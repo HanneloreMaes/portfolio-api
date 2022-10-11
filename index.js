@@ -43,7 +43,7 @@ app.get("/works", async (req, res) => {
         await client.connect();
 
         //DATA FROM COLLECTION BOOKAPI  
-        const colli = client.db(dbName).collection(collection);
+        const colli = client.db(dbName).collection("works");
         const books = await colli.find({}).toArray();
 
 
