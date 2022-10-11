@@ -8,7 +8,7 @@ require('dotenv').config();
 const client = new MongoClient(process.env.URL);
 
 const dbName = process.env.DBNAME;
-const collection = process.env.COLLECTION
+const collection = process.env.COLLECTION;
 
 const app = express();
 const port = process.env.PORT;
