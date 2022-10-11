@@ -5,7 +5,9 @@ const { MongoClient } = require ("mongodb");
 require('dotenv').config();
 
 //CLIENT MONGODB
-const client = new MongoClient(process.env.URL);
+const client = new MongoClient(process.env.URL, {
+    useNewUrlParser: true
+});
 
 const dbName = process.env.DBNAME;
 const collection = process.env.COLLECTION;
@@ -13,7 +15,7 @@ const collection = process.env.COLLECTION;
 const app = express();
 const port = process.env.PORT;
 
-app.use(cors())
+app.use(cors());
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
