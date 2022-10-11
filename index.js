@@ -5,9 +5,7 @@ const { MongoClient } = require ("mongodb");
 require('dotenv').config();
 
 //CLIENT MONGODB
-const client = new MongoClient(process.env.URL, {
-    useNewUrlParser: true
-});
+const client = new MongoClient(process.env.URL);
 
 const dbName = process.env.DBNAME;
 const collection = process.env.COLLECTION
