@@ -15,7 +15,7 @@ const collection = process.env.COLLECTION;
 const app = express();
 const port = process.env.PORT;
 
-app.use(cors());
+//app.use(cors());
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
