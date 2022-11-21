@@ -127,7 +127,7 @@ app.get("/projects/otherProjects", async (req, res) => {
 
         //DATA FROM COLLECTION BOOKAPI  
         const colli = client.db(dbName).collection("Projects");
-        const query = { category: "otherProject"}
+        const query = { category: "otherProjects"}
         const project = await colli.find(query).toArray();
 
 
