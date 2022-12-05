@@ -3,7 +3,7 @@ const fs = require('fs/promises');
 const bodyParser = require('body-parser');
 const { MongoClient } = require ("mongodb");
 require('dotenv').config();
-const cors = require('cors');
+//const cors = require('cors');
 
 //CLIENT MONGODB
 const client = new MongoClient(process.env.URL, {
@@ -19,7 +19,7 @@ const port = process.env.PORT;
 //app.use(cors());
 app.use(express.static('public'));
 app.use(bodyParser.json());
-app.use(cors())
+//app.use(cors())
 
 //ROOT ROUTE
 app.get("/", (req, res) => {
